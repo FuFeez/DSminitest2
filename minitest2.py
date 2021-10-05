@@ -10,13 +10,12 @@ testdata = []
 import random
 
 from random import randrange
-for i in range(5000) :
+for i in range(500000) :
   a = i
   testdata.append(a)
+random.seed(10)
 random.shuffle(testdata)
 
-
-print(testdata)
 
 class Node(object):
     def __init__(self, data):
@@ -163,17 +162,14 @@ def bstinserttest():
   global indexofinsert
   global root
   tree.insert(testdata[indexofinsert])
-  indexofinsert = indexofinsert + 1
+  indexofinsert = indexofinsert + 1 
   return indexofinsert
 
 tree = Tree()
-insertbsttime = timeit.repeat(lambda:bstinserttest() ,number=500,repeat=10)
-searchbsttime = timeit.repeat(lambda:searchbst(),number=500,repeat=10)
-deletebsttime= timeit.repeat(lambda:dell(),number=100,repeat=10)
+insertbsttime = timeit.repeat(lambda:bstinserttest() ,number=50000,repeat=10)
+searchbsttime = timeit.repeat(lambda:searchbst(),number=50000,repeat=10)
+deletebsttime= timeit.repeat(lambda:dell(),number=10000,repeat=10)
 
-
-
-print('\n' ,insertbsttime,'\n',searchbsttime,'\n',deletebsttime)
 
 class TreeNode(object):
     def __init__(self, val):
@@ -375,9 +371,9 @@ def insertAvl():
 
 
 
-insertavltime = timeit.repeat(lambda:insertAvl(),number=500,repeat=10)
-searchavltime = timeit.repeat(lambda:searchAvl(),number=500,repeat=10)
-deleteavltime = timeit.repeat(lambda:delAvl() ,number=100,repeat=10)
+insertavltime = timeit.repeat(lambda:insertAvl(),number=50000,repeat=10)
+searchavltime = timeit.repeat(lambda:searchAvl(),number=50000,repeat=10)
+deleteavltime = timeit.repeat(lambda:delAvl() ,number=10000,repeat=10)
 
 print(insertavltime,'\n',deleteavltime,'\n',searchavltime,'\n')
 
@@ -739,9 +735,9 @@ def searchrb():
 
 
 
-insertrbtime = timeit.repeat(lambda:insertrb(),number=500,repeat=10)
-searchrbtime = timeit.repeat(lambda:searchrb(),number=500,repeat=10)
-deleterbtime = timeit.repeat(lambda:delrb() ,number=100,repeat=10)
+insertrbtime = timeit.repeat(lambda:insertrb(),number=50000,repeat=10)
+searchrbtime = timeit.repeat(lambda:searchrb(),number=50000,repeat=10)
+deleterbtime = timeit.repeat(lambda:delrb() ,number=10000,repeat=10)
 
 print(insertrbtime,'\n',searchrbtime,'\n',deleterbtime,'\n')
 
@@ -768,12 +764,11 @@ plt.figure(figsize=(7.195, 3.841), dpi=100)
 plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
 plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
 plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
-plt.xlabel('ordinal number',color = 'white')
-plt.ylabel('second', color = 'white')
-plt.title('INSERT \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
-plt.tick_params(colors='white', which='both')
-
-plt.legend(loc='best',labelcolor='white')
+plt.xlabel('ordinal number',color = '#2e6173')
+plt.ylabel('second', color = '#2e6173')
+plt.title('INSERT \n COMPARE WITH BST , AVL , REDBLACK' , color= '#2e6173')
+plt.tick_params(colors='#2e6173', which='both')
+plt.legend(loc='best',labelcolor='#2e6173')
 plt.grid(axis='y',color='#808080')
 plt.savefig('insertgraph.png',transparent=True,dpi = 1000 )
 plt.show()
@@ -787,11 +782,11 @@ plt.figure(figsize=(7.195, 3.841), dpi=100)
 plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
 plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
 plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
-plt.xlabel('ordinal number',color = 'white')
-plt.ylabel('second', color = 'white')
-plt.title('SEARCH \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
-plt.tick_params(colors='white', which='both')
-plt.legend(loc='best',labelcolor='white')
+plt.xlabel('ordinal number',color = '#2e6173')
+plt.ylabel('second', color = '#2e6173')
+plt.title('SEARCH \n COMPARE WITH BST , AVL , REDBLACK' , color= '#2e6173')
+plt.tick_params(colors='#2e6173', which='both')
+plt.legend(loc='best',labelcolor='#2e6173')
 plt.grid(axis='y',color='#808080')
 plt.savefig('searchgraph.png',transparent=True,dpi = 1000 )
 
@@ -805,11 +800,11 @@ plt.figure(figsize=(7.195, 3.841), dpi=100)
 plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
 plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
 plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
-plt.xlabel('ordinal number',color = 'white')
-plt.ylabel('second', color = 'white')
-plt.title('DELETE \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
-plt.tick_params(colors='white', which='both')
-plt.legend(loc='best',labelcolor='white')
+plt.xlabel('ordinal number',color = '#2e6173')
+plt.ylabel('second', color = '#2e6173')
+plt.title('DELETE \n COMPARE WITH BST , AVL , REDBLACK' , color= '#2e6173')
+plt.tick_params(colors='#2e6173', which='both')
+plt.legend(loc='best',labelcolor='#2e6173')
 plt.grid(axis='y',color='#808080')
 plt.savefig('deletegraph.png',transparent=True,dpi = 1000 )
 plt.show()
