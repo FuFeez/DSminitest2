@@ -765,15 +765,17 @@ y1 = insertbsttime
 y2 = insertavltime
 y3 = insertrbtime
 plt.figure(figsize=(7.195, 3.841), dpi=100)
-plt.plot(x,y1,marker= 'p',ms=5.5,color='#FEA4B0',label='BST')
-plt.plot(x,y2,marker= 'p',ms=5.5,color='#84BAC9',label='AVL')
-plt.plot(x,y3,marker= 'p',ms=5.5,color='#D28BB5',label='REDBLACK')
-plt.xlabel('ordinal number')
-plt.ylabel('second')
-plt.title('INSERT \n COMPARE WITH BST , AVL , REDBLACK')
-plt.legend()
-plt.grid(axis='y',color='0.95')
-plt.savefig('insertgraph.png',transparent=True,dpi=1000)
+plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
+plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
+plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
+plt.xlabel('ordinal number',color = 'white')
+plt.ylabel('second', color = 'white')
+plt.title('INSERT \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
+plt.tick_params(colors='white', which='both')
+
+plt.legend(loc='best',labelcolor='white')
+plt.grid(axis='y',color='#808080')
+plt.savefig('insertgraph.png',transparent=True,dpi = 1000 )
 plt.show()
 
 
@@ -782,15 +784,17 @@ y1 = searchbsttime
 y2 = searchavltime
 y3 = searchrbtime
 plt.figure(figsize=(7.195, 3.841), dpi=100)
-plt.plot(x,y1,marker= 'p',ms=5.5,color='#FEA4B0',label='BST')
-plt.plot(x,y2,marker= 'p',ms=5.5,color='#84BAC9',label='AVL')
-plt.plot(x,y3,marker= 'p',ms=5.5,color='#D28BB5',label='REDBLACK')
-plt.xlabel('ordinal number')
-plt.ylabel('second')
-plt.title('SEARCH \n COMPARE WITH BST , AVL , REDBLACK')
-plt.legend()
-plt.grid(axis='y',color='0.95')
-plt.savefig('searchgraph.png',transparent=True,dpi=1000)
+plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
+plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
+plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
+plt.xlabel('ordinal number',color = 'white')
+plt.ylabel('second', color = 'white')
+plt.title('SEARCH \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
+plt.tick_params(colors='white', which='both')
+plt.legend(loc='best',labelcolor='white')
+plt.grid(axis='y',color='#808080')
+plt.savefig('searchgraph.png',transparent=True,dpi = 1000 )
+
 plt.show()
 
 x = ['1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th']
@@ -798,13 +802,14 @@ y1 = deletebsttime
 y2 = deleteavltime
 y3 = deleterbtime
 plt.figure(figsize=(7.195, 3.841), dpi=100)
-plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#FEA4B0')
+plt.plot(x,y1,marker= 'p',ms=5.5,label='BST',color='#81A684')
 plt.plot(x,y2,marker= 'p',ms=5.5,label='AVL',color='#84BAC9')
 plt.plot(x,y3,marker= 'p',ms=5.5,label='REDBLACK',color='#D28BB5')
-plt.xlabel('ordinal number')
-plt.ylabel('second')
-plt.title('DELETE \n COMPARE WITH BST , AVL , REDBLACK')
-plt.legend()
-plt.grid(axis='y',color='0.95')
+plt.xlabel('ordinal number',color = 'white')
+plt.ylabel('second', color = 'white')
+plt.title('DELETE \n COMPARE WITH BST , AVL , REDBLACK' , color= 'white')
+plt.tick_params(colors='white', which='both')
+plt.legend(loc='best',labelcolor='white')
+plt.grid(axis='y',color='#808080')
 plt.savefig('deletegraph.png',transparent=True,dpi = 1000 )
 plt.show()
